@@ -1,0 +1,81 @@
+:root {
+  --primary: #5f259f;
+  --secondary: #7026b9;
+  --accent: #e94057;
+  --light-bg: #f6f6f6;
+  --text-dark: #2e2e2e;
+}
+
+body {
+  background-color: var(--light-bg);
+  color: var(--text-dark);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.navbar-custom {
+  background-color: var(--primary);
+}
+
+.wallet-card {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: white;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.quick-action {
+  background-color: white;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  transition: all 0.2s;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.quick-action:hover {
+  transform: translateY(-5px);
+}
+
+.quick-action .icon {
+  font-size: 32px;
+  margin-bottom: 10px;
+  color: var(--primary);
+}
+
+.nav-tabs .nav-link.active {
+  background-color: var(--primary);
+  color: white;
+}
+
+.dark-mode {
+  background-color: #121212 !important;
+  color: #eeeeee !important;
+}
+
+.dark-mode .card,
+.dark-mode .quick-action {
+  background-color: #1f1f1f !important;
+  color: #ccc !important;
+  border-color: #2a2a2a !important;
+}
+
+.dark-mode .navbar-custom {
+  background-color: #2a2a2a !important;
+}
+
+
+.alert {
+  margin: 10px 0;
+  border-radius: 8px;
+}
+
+.offer-card {
+    width: 400px;
+    height: 200px;
+  padding: 15px;
+  background-color: #f8f9fa;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+

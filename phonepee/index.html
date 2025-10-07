@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>PhonePe Advanced UI</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
+  <div class="container-fluid">
+    <a class="navbar-brand fw-bold" href="#">PhonePe UI</a>
+    <form class="d-flex ms-auto" role="search">
+      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+    </form>
+    <button class="btn btn-light btn-sm ms-3" onclick="toggleDarkMode()">🌙</button>
+  </div>
+</nav>
+
+<!-- Wallet Balance -->
+<section class="container my-4">
+  <div class="wallet-card">
+    <div class="d-flex justify-content-between align-items-center">
+      <div>
+        <h5>Wallet Balance</h5>
+        <h2>₹2,540.75</h2>
+      </div>
+      <button class="btn btn-light text-dark">+ Add Money</button>
+    </div>
+  </div>
+</section>
+
+<!-- Quick Actions -->
+<section class="container my-5">
+  <h4 class="mb-4">Quick Actions</h4>
+  <div class="row g-3">
+    <div class="col-6 col-md-3">
+      <div class="quick-action">
+        <div class="icon">📲</div>
+        <div>Recharge</div>
+      </div>
+    </div>
+    <div class="col-6 col-md-3">
+      <div class="quick-action">
+        <div class="icon">💡</div>
+        <div>Pay Bills</div>
+      </div>
+    </div>
+    <div class="col-6 col-md-3">
+      <div class="quick-action">
+        <div class="icon">🏦</div>
+        <div>Send to Bank</div>
+      </div>
+    </div>
+    <div class="col-6 col-md-3">
+      <div class="quick-action">
+        <div class="icon">🎁</div>
+        <div>Cashback</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Transaction History -->
+<section class="container my-5">
+  <h4 class="mb-3">Transaction History</h4>
+  <ul class="nav nav-tabs" id="transactionTabs" role="tablist">
+    <li class="nav-item" role="presentation">
+      <button class="nav-link active" id="all-tab" data-bs-toggle="tab" data-bs-target="#all"
+        type="button" role="tab">All</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="sent-tab" data-bs-toggle="tab" data-bs-target="#sent"
+        type="button" role="tab">Sent</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="received-tab" data-bs-toggle="tab" data-bs-target="#received"
+        type="button" role="tab">Received</button>
+    </li>
+  </ul>
+  <div class="tab-content pt-3">
+    <div class="tab-pane fade show active" id="all" role="tabpanel">
+      <ul class="list-group">
+        <li class="list-group-item d-flex justify-content-between">
+          <span>Paid to Amazon</span><strong class="text-danger">-₹899</strong>
+        </li>
+        <li class="list-group-item d-flex justify-content-between">
+          <span>Received from Sharmila</span><strong class="text-success">+₹500</strong>
+        </li>
+        <li class="list-group-item d-flex justify-content-between">
+          <span>Electricity Bill</span><strong class="text-danger">-₹1200</strong>
+        </li>
+      </ul>
+    </div>
+    <div class="tab-pane fade" id="sent" role="tabpanel">
+      <ul class="list-group">
+        <li class="list-group-item d-flex justify-content-between">
+          <span>Paid to Flipkart</span><strong class="text-danger">-₹450</strong>
+        </li>
+        <li class="list-group-item d-flex justify-content-between">
+          <span>Recharge</span><strong class="text-danger">-₹199</strong>
+        </li>
+      </ul>
+    </div>
+    <div class="tab-pane fade" id="received" role="tabpanel">
+      <ul class="list-group">
+        <li class="list-group-item d-flex justify-content-between">
+          <span>Received from Fayaz</span><strong class="text-success">+₹1,200</strong>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- Profile -->
+<section class="container my-5">
+  <div class="card p-4 shadow-sm">
+    <div class="d-flex align-items-center">
+      <img src="" class="rounded-circle me-3" alt="User" width="70" height="70">
+      <div>
+        <h5 class="mb-1">Thasleem Begum</h5>
+        <p class="mb-0 text-muted">tasleems381@gmail.com</p>
+      </div>
+      <button class="btn btn-outline-primary ms-auto">Edit Profile</button>
+    </div>
+  </div>
+</section>
+
+<!-- Your Rewards Section -->
+<section class="container my-5">
+  <h4 class="mb-3">Your Rewards</h4>
+  <div class="alert alert-warning d-flex justify-content-between align-items-center" role="alert">
+    🎁 Link Your Credit Card and Earn 2x Rewards
+    <button class="btn btn-sm btn-primary">→</button>
+  </div>
+</section>
+
+<!-- Upcoming Payments Section -->
+<section class="container my-5">
+  <h4 class="mb-3">Upcoming Payments</h4>
+  <div class="alert alert-warning d-flex justify-content-between align-items-center" role="alert">
+    💡 Electricity Bill due in 2 days (₹950)
+    <button class="btn btn-sm btn-primary">Pay Now</button>
+  </div>
+  <div class="alert alert-info d-flex justify-content-between align-items-center" role="alert">
+    📶 DTH Recharge due tomorrow (₹350)
+    <button class="btn btn-sm btn-primary">Recharge</button>
+  </div>
+</section>
+
+<!-- Exclusive Offers for You Section -->
+<section class="container my-5">
+  <h4 class="mb-3">Exclusive Offers for You</h4>
+  <div class="row g-4">
+    <!-- Offer 1 -->
+    <div class="col-md-4">
+      <div class="offer-card">
+        <h5 class="text-primary">💸 Flat ₹100 Cashback</h5>
+        <p>On your first UPI transaction of ₹500 or more.</p>
+        <p class="text-muted small">Valid till: April 30, 2025</p>
+        <a href="#" class="btn btn-sm btn-primary">Activate Offer</a>
+      </div>
+    </div>
+    <!-- Offer 2 -->
+    <div class="col-md-4">
+      <div class="offer-card">
+        <h5 class="text-success">🍔 20% Off on Zomato</h5>
+        <p>Pay via PhonePe wallet and save on food orders.</p>
+        <p class="text-muted small">Use Code: ZOMATO20</p>
+        <a href="#" class="btn btn-sm btn-success">Order Now</a>
+      </div>
+    </div>
+    <!-- Offer 3 -->
+    <div class="col-md-4">
+      <div class="offer-card">
+        <h5 class="text-danger">🛍 Amazon Deal Zone</h5>
+        <p>Get up to ₹500 cashback on Amazon purchases with UPI.</p>
+        <p class="text-muted small">Min order: ₹999</p>
+        <a href="#" class="btn btn-sm btn-danger">Shop Now</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Rewards -->
+<section class="container my-5">
+  <h4 class="mb-3">Your Rewards</h4>
+  <div id="rewardsCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner rounded shadow-sm">
+      <div class="carousel-item active">
+        <div class="p-4 bg-success text-white rounded">
+          🎉 Get ₹50 Cashback on First UPI Payment!
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="p-4 bg-info text-white rounded">
+          🛒 Save 10% on Grocery Orders This Week
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="p-4 bg-warning text-dark rounded">
+          💳 Link Your Credit Card and Earn 2x Rewards
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#rewardsCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#rewardsCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="text-center py-3 bg-dark text-white mt-5">
+  <p class="mb-0">&copy; 2025 PhonePe UI Prototype | Built with 💜</p>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Custom JS -->
+<script src="script.js"></script>
+
+</body>
+</html>
